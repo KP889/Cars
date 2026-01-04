@@ -12,9 +12,18 @@ set(SRC_LIST
     main.cpp
     PetrolCar.cpp
     PetrolEngine.cpp
+    Cars.cpp
+    
 )
+
+find_package(Catch2)
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})
 target_compile_options(${PROJECT_NAME} PUBLIC -Wall -Werror -Wpedantic -Wextra)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
 
+add_executable(${PROJECT_NAME}-ut test/Cars.ut.cpp )
+target_compile_options(${PROJECT_NAME}-ut PRIVATE ${FLAGS})
+target_compile_features(${PROJECT_NAME}-ut PRIVATE cxx_std_17)
+#target_link_libraries(${PROJECT_NAME}-ut ${PROJECT_NAME}-lib Catch2::Catch2WithMain)
+target_link_libraries(${PROJECT_NAME}-ut  Catch2::Catch2WithMain)
