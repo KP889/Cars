@@ -17,6 +17,7 @@ class PetrolEngine
 public:
     PetrolEngine(int power=0, float capacity=0, int gears=0);
     void changeGear(int gear);
+
 private:
     int power_;         // in HP
     float capacity_;    // in ccm
