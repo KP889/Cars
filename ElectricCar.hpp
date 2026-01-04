@@ -13,4 +13,3 @@ public:
 private:
     ElectricEngine* engine_;
 };
-

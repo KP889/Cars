@@ -1,5 +1,6 @@
 #pragma once
 #include "ElectricEngine.hpp"
+#include "PetrolCar.hpp"
 #include "PetrolEngine.hpp"
 #include "ElectricCar.hpp"
 #include "PetrolCar.hpp"
