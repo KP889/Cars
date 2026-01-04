@@ -27,34 +27,7 @@ TEST_CASE("spalinowySilik1", "zmiana biegu ==1")
     PetrolEngine e(100, 25, 6);
     REQUIRE_NOTHROW(e.changeGear(1));
 }
-/*
-TEST_CASE("wydajnosc", "[zmiana]")
-{
-    PetrolEngine e(100, 25, 6);
-    BENCHMARK("change gear")
-    {
 
-        return e.changeGear(1);
-    };
-
-    BENCHMARK("dupa")
-    {
-        e.changeGear(1);
-    };
-}
-    */
-/*
-TEST_CASE("Sorting benchmark", "[benchmark]") {
-    BENCHMARK_ADVANCED("std::sort")(Catch::Benchmark::Chronometer meter) {
-        std::vector<int> v(10'000);
-        std::generate(v.begin(), v.end(), rand);
-
-        meter.measure([&] {
-            std::sort(v.begin(), v.end());
-        });
-    };
-}
-    */
 
 TEST_CASE("spalinowy2_petla", "[zmianaa]")
 {
