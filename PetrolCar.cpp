@@ -17,4 +17,8 @@ PetrolCar::~PetrolCar()         {
 void PetrolCar::refuel()        { std::cout << __FUNCTION__ << std::endl; }
 void PetrolCar::refill(){refuel();}
 void PetrolCar::ChangeGear(int gear){this->engine_->changeGear(gear);};
+void PetrolCar::changeEngine(PetrolEngine* pe) {
+    delete engine_;
+    engine_ = pe;
+}
 

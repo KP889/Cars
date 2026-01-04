@@ -12,7 +12,7 @@ set(SRC_LIST
     main.cpp
     PetrolCar.cpp
     PetrolEngine.cpp
-    Cars.cpp
+    Car.cpp
     
 )
 

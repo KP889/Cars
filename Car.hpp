@@ -2,13 +2,13 @@
 #include <iostream>
 #include <stdexcept>
 
-class Cars
+class Car
 {
 private:
     /* data */
 public:
-    Cars(/* args */){};
-    virtual ~Cars(){};
+    Car(/* args */){};
+    virtual ~Car(){};
     void turnLeft();
     void turnRight();
     void brake();
