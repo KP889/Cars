@@ -8,6 +8,10 @@ jobs:
     env:
       path: build
     steps:
+    - name: Install Catch2
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y catch2
     - name: Check out code
       uses: actions/checkout@master
     - name: Create build directory
