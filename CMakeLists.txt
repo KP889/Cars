@@ -22,6 +22,7 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 target_compile_options(${PROJECT_NAME} PUBLIC -Wall -Wpedantic -Wextra)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
 
+enable_testing()
 add_executable(${PROJECT_NAME}-ut test/Cars.ut.cpp )
 target_compile_options(${PROJECT_NAME}-ut PRIVATE ${FLAGS})
 target_compile_features(${PROJECT_NAME}-ut PRIVATE cxx_std_17)
