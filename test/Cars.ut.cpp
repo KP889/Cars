@@ -57,9 +57,9 @@ TEST_CASE("spalinowy2_transform", "[zmiana22]")
     BENCHMARK_ADVANCED("change gear!")(Catch::Benchmark::Chronometer meter)
     {
         std::vector<int> vec_p(6);
-        std::vector<int> vec_n(5);
+        std::vector<int> vec_n(6);
         std::iota(vec_p.begin(), vec_p.begin() + 6, 1);
-        std::iota(vec_n.rbegin(), vec_n.rbegin() + 5, 1);
+        std::iota(vec_n.rbegin(), vec_n.rbegin() + 6, 0);
         for (auto ee : vec_n)
         {
             std::cout << ee << ", ";
@@ -67,14 +67,17 @@ TEST_CASE("spalinowy2_transform", "[zmiana22]")
 
         PetrolEngine e(100, 25, 6);
 
-        meter.measure([&](int)
+        meter.measure([&]()
                       {
+                       
                           std::transform(vec_p.begin(), vec_p.end(), vec_p.begin(), [&](int x)
                                          {e.changeGear(x);return x; });
                           std::cout << "Reverse \n";
-                          std::transform(vec_n.begin(), vec_p.end(), vec_n.begin(), [&](int x)
+                          std::transform(vec_n.begin(), vec_n.end(), vec_n.begin(), [&](int x)
                                          {e.changeGear(x);return x; });
+                                          
                       });
+                 
     };
 };
 
